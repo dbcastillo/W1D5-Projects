@@ -1,0 +1,78 @@
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m
+
+Failures:
+
+  1) PolyTreeNode#remove_child should raise an error if node is not a child
+     [31mFailure/Error: expect do[0m
+     [31m  expected Exception but nothing was raised[0m
+     [36m# ./spec/00_tree_node_spec.rb:90:in `block (3 levels) in <top (required)>'[0m
+
+  2) Searchable #dfs should take correct path to descendant
+     [31mFailure/Error: expect(nodes.first.dfs('e')).to equal(nodes[4])[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `dfs' for #<PolyTreeNode:0x007f8140a5d408>[0m
+     [36m# ./spec/00_tree_node_spec.rb:132:in `block (3 levels) in <top (required)>'[0m
+
+  3) Searchable #dfs behaves like search method should return itself if it contains the value
+     [31mFailure/Error: expect(nodes.first.send(search_method, 'a')).to equal(nodes.first)[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `dfs' for #<PolyTreeNode:0x007f8140a3fd40>[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:125[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:111:in `block (3 levels) in <top (required)>'[0m
+
+  4) Searchable #dfs behaves like search method should find descendant
+     [31mFailure/Error: expect(nodes.first.send(search_method, 'g')).to equal(nodes[6])[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `dfs' for #<PolyTreeNode:0x007f8140a3e8c8>[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:125[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:115:in `block (3 levels) in <top (required)>'[0m
+
+  5) Searchable #dfs behaves like search method should return nil when value is not found
+     [31mFailure/Error: expect(nodes.first.send(search_method, 'x')).to be_nil[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `dfs' for #<PolyTreeNode:0x007f8140a3d4c8>[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:125[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:119:in `block (3 levels) in <top (required)>'[0m
+
+  6) Searchable #bfs should take correct path to descendant
+     [31mFailure/Error: expect(nodes.first.bfs('f')).to equal(nodes[5])[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `bfs' for #<PolyTreeNode:0x007f8140a37a78>[0m
+     [36m# ./spec/00_tree_node_spec.rb:145:in `block (3 levels) in <top (required)>'[0m
+
+  7) Searchable #bfs behaves like search method should return itself if it contains the value
+     [31mFailure/Error: expect(nodes.first.send(search_method, 'a')).to equal(nodes.first)[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `bfs' for #<PolyTreeNode:0x007f8140a27e48>[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:138[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:111:in `block (3 levels) in <top (required)>'[0m
+
+  8) Searchable #bfs behaves like search method should find descendant
+     [31mFailure/Error: expect(nodes.first.send(search_method, 'g')).to equal(nodes[6])[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `bfs' for #<PolyTreeNode:0x007f8140a26818>[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:138[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:115:in `block (3 levels) in <top (required)>'[0m
+
+  9) Searchable #bfs behaves like search method should return nil when value is not found
+     [31mFailure/Error: expect(nodes.first.send(search_method, 'x')).to be_nil[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `bfs' for #<PolyTreeNode:0x007f8140a24e50>[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:138[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:119:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.02003 seconds (files took 0.28169 seconds to load)
+[31m22 examples, 9 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/00_tree_node_spec.rb:89[0m [36m# PolyTreeNode#remove_child should raise an error if node is not a child[0m
+[31mrspec ./spec/00_tree_node_spec.rb:127[0m [36m# Searchable #dfs should take correct path to descendant[0m
+[31mrspec ./spec/00_tree_node_spec.rb:110[0m [36m# Searchable #dfs behaves like search method should return itself if it contains the value[0m
+[31mrspec ./spec/00_tree_node_spec.rb:114[0m [36m# Searchable #dfs behaves like search method should find descendant[0m
+[31mrspec ./spec/00_tree_node_spec.rb:118[0m [36m# Searchable #dfs behaves like search method should return nil when value is not found[0m
+[31mrspec ./spec/00_tree_node_spec.rb:140[0m [36m# Searchable #bfs should take correct path to descendant[0m
+[31mrspec ./spec/00_tree_node_spec.rb:110[0m [36m# Searchable #bfs behaves like search method should return itself if it contains the value[0m
+[31mrspec ./spec/00_tree_node_spec.rb:114[0m [36m# Searchable #bfs behaves like search method should find descendant[0m
+[31mrspec ./spec/00_tree_node_spec.rb:118[0m [36m# Searchable #bfs behaves like search method should return nil when value is not found[0m
+
